@@ -10,7 +10,18 @@ public class Comment {
     private String message;
 
     @SerializedName("owner")
-    private String user;
+    private userInfo user;
+
+    @SerializedName("id")
+    private String postId;
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
 
     public String getPublishDate() {
         return publishDate;
@@ -28,11 +39,11 @@ public class Comment {
         this.message = message;
     }
 
-    public String getUser() {
+    public userInfo getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(userInfo user) {
         this.user = user;
     }
 }

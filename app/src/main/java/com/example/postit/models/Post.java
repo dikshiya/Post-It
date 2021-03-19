@@ -26,10 +26,12 @@ public class Post implements Serializable {
     private ArrayList<String> tags;
 
     @SerializedName("owner")
-    private String user;
+    private userInfo user;
 
     @SerializedName("text")
     private String postTitle;
+
+    private transient boolean typeLoad;
 
     public String getPostTitle() {
         return postTitle;
@@ -87,11 +89,19 @@ public class Post implements Serializable {
         this.tags = tags;
     }
 
-    public String getUser() {
+    public userInfo getUser() {
         return user;
     }
 
-    public void setUser(String user) {
+    public void setUser(userInfo user) {
         this.user = user;
+    }
+
+    public boolean istypeLoad() {
+        return typeLoad;
+    }
+
+    public void setTypeLoad(boolean typeLoad) {
+        this.typeLoad = typeLoad;
     }
 }

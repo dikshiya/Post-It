@@ -5,19 +5,9 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class typeResults implements Serializable {
-    @SerializedName("PostList")
-    private ArrayList<Post> postList;
-    @SerializedName("CommentList")
+public class commentResults implements Serializable {
+    @SerializedName("data")
     private ArrayList<Comment> commentList;
-
-    public ArrayList<Post> getPostList() {
-        return postList;
-    }
-
-    public void setPostList(ArrayList<Post> postList) {
-        this.postList = postList;
-    }
 
     public ArrayList<Comment> getCommentList() {
         return commentList;
